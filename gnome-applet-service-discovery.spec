@@ -1,6 +1,6 @@
 %define		_realname   service-discovery-applet
 Summary:	An GNOME applet for service discovery via mdns
-Summary(pl):	Applet GNOME do wykrywanie us³ug poprzez mdns
+Summary(pl):	Aplet GNOME do wykrywanie us³ug poprzez mdns
 Name:		gnome-applet-service-discovery
 Version:	0.4
 Release:	0.1
@@ -9,24 +9,26 @@ Group:		X11/Applications
 Source0:	http://0pointer.de/~sebest/%{_realname}-%{version}.tar.gz
 # Source0-md5:	85083dd169ab00c3ab29911c3775a9d2
 URL:		http://avahi.org/
-BuildRequires:	avahi-devel >= 0.5
+BuildRequires:	avahi-discover >= 0.5
+BuildRequires:	python-devel >= 1:2.4
+BuildRequires:	python-dbus
 BuildRequires:	python-gnome
-Requires:	avahi >= 0.5
-Requires:	GConf2
-Requires:	libbonobo
-Requires:	python-libs
+%pyrequires_eq	python-libs
+Requires:	avahi-discover >= 0.5
+Requires:	python-gnome-desktop-applet
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a small GNOME applet making use of the zeroconf dns-sd facility to
-listen for services announced via zeroconf protocol. The applet allows to
-easily connect to that service and  has a quite rich services type filter.
+This is a small GNOME applet making use of the zeroconf dns-sd
+facility to listen for services announced via zeroconf protocol. The
+applet allows to easily connect to that service and has a quite rich
+services type filter.
 
 %description -l pl
-Ten ma³y applet GNOME wykorzystuje technologiê zeroconf dns-sd to nas³uchiwania
-og³aszanych us³ug w sieci przy pomocy protoko³u zeroconf. Applet pozwala
-po³±czyæ siê z us³ugami w ³atwy sposób oraz posada ca³kiem bogaty zbiór filtrów
-na typy us³ug.
+Ten ma³y aplet GNOME wykorzystuje technologiê zeroconf dns-sd do
+nas³uchiwania og³aszanych us³ug w sieci przy pomocy protoko³u
+zeroconf. Aplet pozwala w ³atwy sposób ³±czyæ siê z us³ugami i ma
+ca³kiem bogaty zbiór filtrów na rodzaje us³ug.
 
 %prep
 %setup -q -n %{_realname}-%{version}
@@ -54,11 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{_realname}.lang
 %defattr(644,root,root,755)
-#%doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
+%doc AUTHORS README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/service-discovery-applet
 %{_libdir}/bonobo/servers/GNOME_ServiceDiscoveryApplet.server
 %dir %{py_sitescriptdir}/sdapplet
-%{py_sitescriptdir}/sdapplet/*.pyc
-%{py_sitescriptdir}/sdapplet/*.pyo
+%{py_sitescriptdir}/sdapplet/*.py[co]
 %{_sysconfdir}/gconf/schemas/service-discovery-applet.schemas
