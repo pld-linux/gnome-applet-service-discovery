@@ -1,6 +1,6 @@
 %define		_realname   service-discovery-applet
 Summary:	An GNOME applet for service discovery via mdns
-Summary(pl):	Aplet GNOME do wykrywanie us≥ug poprzez mdns
+Summary(pl.UTF-8):   Aplet GNOME do wykrywanie us≈Çug poprzez mdns
 Name:		gnome-applet-service-discovery
 Version:	0.4
 Release:	0.1
@@ -24,11 +24,11 @@ facility to listen for services announced via zeroconf protocol. The
 applet allows to easily connect to that service and has a quite rich
 services type filter.
 
-%description -l pl
-Ten ma≥y aplet GNOME wykorzystuje technologiÍ zeroconf dns-sd do
-nas≥uchiwania og≥aszanych us≥ug w sieci przy pomocy protoko≥u
-zeroconf. Aplet pozwala w ≥atwy sposÛb ≥±czyÊ siÍ z us≥ugami i ma
-ca≥kiem bogaty zbiÛr filtrÛw na rodzaje us≥ug.
+%description -l pl.UTF-8
+Ten ma≈Çy aplet GNOME wykorzystuje technologiƒô zeroconf dns-sd do
+nas≈Çuchiwania og≈Çaszanych us≈Çug w sieci przy pomocy protoko≈Çu
+zeroconf. Aplet pozwala w ≈Çatwy spos√≥b ≈ÇƒÖczyƒá siƒô z us≈Çugami i ma
+ca≈Çkiem bogaty zbi√≥r filtr√≥w na rodzaje us≈Çug.
 
 %prep
 %setup -q -n %{_realname}-%{version}
