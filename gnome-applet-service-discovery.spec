@@ -1,6 +1,6 @@
 %define		_realname   service-discovery-applet
 Summary:	An GNOME applet for service discovery via mdns
-Summary(pl.UTF-8):   Aplet GNOME do wykrywanie usług poprzez mdns
+Summary(pl.UTF-8):	Aplet GNOME do wykrywanie usług poprzez mdns
 Name:		gnome-applet-service-discovery
 Version:	0.4
 Release:	0.1
