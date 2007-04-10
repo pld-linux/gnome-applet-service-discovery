@@ -2,12 +2,12 @@
 Summary:	An GNOME applet for service discovery via mdns
 Summary(pl.UTF-8):	Aplet GNOME do wykrywanie usług poprzez mdns
 Name:		gnome-applet-service-discovery
-Version:	0.4
+Version:	0.4.3
 Release:	0.1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://0pointer.de/~sebest/%{_realname}-%{version}.tar.gz
-# Source0-md5:	85083dd169ab00c3ab29911c3775a9d2
+# Source0-md5:	68e67e75d4e5223e75a656b61e76d6d4
 URL:		http://avahi.org/
 BuildRequires:	avahi-discover >= 0.5
 BuildRequires:	python-devel >= 1:2.4
