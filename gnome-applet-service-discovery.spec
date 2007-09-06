@@ -1,4 +1,4 @@
-%define		_realname   service-discovery-applet
+%define		_realname	service-discovery-applet
 Summary:	An GNOME applet for service discovery via mdns
 Summary(pl.UTF-8):	Aplet GNOME do wykrywanie usług poprzez mdns
 Name:		gnome-applet-service-discovery
@@ -14,7 +14,7 @@ BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-dbus
 BuildRequires:	python-gnome
 %pyrequires_eq	python-libs
-BuildRequires:  gettext-autopoint
+BuildRequires:	gettext-autopoint
 Requires:	avahi-discover >= 0.5
 Requires:	python-gnome-desktop-applet
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
