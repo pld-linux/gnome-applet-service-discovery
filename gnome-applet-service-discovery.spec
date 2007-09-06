@@ -10,11 +10,11 @@ Source0:	http://0pointer.de/~sebest/%{_realname}-%{version}.tar.gz
 # Source0-md5:	68e67e75d4e5223e75a656b61e76d6d4
 URL:		http://avahi.org/
 BuildRequires:	avahi-discover >= 0.5
-BuildRequires:	python-devel >= 1:2.4
+BuildRequires:	gettext-autopoint
 BuildRequires:	python-dbus
+BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-gnome
 %pyrequires_eq	python-libs
-BuildRequires:	gettext-autopoint
 Requires:	avahi-discover >= 0.5
 Requires:	python-gnome-desktop-applet
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
