@@ -59,7 +59,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/service-discovery-applet
+%dir %{_datadir}/service-discovery-applet
+%{_datadir}/service-discovery-applet/icons
+%{_datadir}/service-discovery-applet/interfaces
+%{_datadir}/service-discovery-applet/plugins
+%dir %{_datadir}/service-discovery-applet/tools
+%attr(755,root,root) %{_datadir}/service-discovery-applet/tools/exec_wrapper
 %{_libdir}/bonobo/servers/GNOME_ServiceDiscoveryApplet.server
 %dir %{py_sitescriptdir}/sdapplet
 %{py_sitescriptdir}/sdapplet/*.py[co]
