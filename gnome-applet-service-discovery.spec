@@ -14,6 +14,7 @@ BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-dbus
 BuildRequires:	python-gnome
 %pyrequires_eq	python-libs
+BuildRequires:  gettext-autopoint
 Requires:	avahi-discover >= 0.5
 Requires:	python-gnome-desktop-applet
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
