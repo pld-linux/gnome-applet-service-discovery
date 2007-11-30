@@ -14,7 +14,9 @@ BuildRequires:	gettext-autopoint
 BuildRequires:	python-dbus
 BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-gnome
+BuildRequires:	rpmbuild(macros) >= 1.198
 %pyrequires_eq	python-libs
+Requires(post,preun):	GConf2
 Requires:	avahi-discover >= 0.5
 Requires:	python-gnome-desktop-applet
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -53,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %gconf_schema_install service-discovery-applet.schemas
 
 %preun
-%gconf_schema_uninstall service-discovery-applet.schema
+%gconf_schema_uninstall service-discovery-applet.schemas
 
 %files -f %{_realname}.lang
 %defattr(644,root,root,755)
