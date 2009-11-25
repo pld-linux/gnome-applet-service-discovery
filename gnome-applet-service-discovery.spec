@@ -11,9 +11,11 @@ Source0:	http://0pointer.de/~sebest/%{_realname}-%{version}.tar.gz
 URL:		http://avahi.org/
 BuildRequires:	avahi-discover >= 0.5
 BuildRequires:	gettext-autopoint
+BuildRequires:	perl-XML-Parser
 BuildRequires:	python-dbus
 BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	python-gnome
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.198
 %pyrequires_eq	python-libs
 Requires(post,preun):	GConf2
