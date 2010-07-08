@@ -3,7 +3,7 @@ Summary:	An GNOME applet for service discovery via mdns
 Summary(pl.UTF-8):	Aplet GNOME do wykrywanie usług poprzez mdns
 Name:		gnome-applet-service-discovery
 Version:	0.4.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://0pointer.de/~sebest/%{_realname}-%{version}.tar.gz
